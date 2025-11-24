@@ -1,3 +1,4 @@
+
 # Nikola Kremić - Personal Portfolio Website
 
 A modern, clean, and fully responsive personal portfolio website built with React and TailwindCSS. Features smooth animations, beautiful UI components, and a professional design showcasing skills, projects, and achievements.
@@ -318,10 +319,13 @@ This project is open source and available for personal use. Feel free to fork an
 ## Contact
 
 **Nikola Kremić**
-- Email: nikola.kremic@example.com
+- Email: nikolakremic15@gmail.com
 - GitHub: [@nikolakremic](https://github.com/nikolakremic)
 - LinkedIn: [nikolakremic](https://linkedin.com/in/nikolakremic)
 
 ---
 
 Built with React & TailwindCSS | Designed and developed by Nikola Kremić
+
+
+
