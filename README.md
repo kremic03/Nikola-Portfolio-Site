@@ -320,8 +320,8 @@ This project is open source and available for personal use. Feel free to fork an
 
 **Nikola Kremić**
 - Email: nikolakremic15@gmail.com
-- GitHub: [@nikolakremic](https://github.com/nikolakremic)
-- LinkedIn: [nikolakremic](https://linkedin.com/in/nikolakremic)
+- GitHub: [@kremic03](https://github.com/kremic03)
+- LinkedIn: [Nikola Kremic](https://www.linkedin.com/in/nikola-kremic-b4a318257/)
 
 ---
 
