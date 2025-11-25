@@ -38,8 +38,8 @@ function Projects() {
       description:
         'Developed an Android mobile application using Kotlin in Android Studio. Implemented features for tracking payments and online orders with Firebase integration for data storage and real-time updates. Focused on creating a clean, user-friendly interface and ensuring smooth app performance.',
       techStack: ['Kotlin', 'Android Studio', 'Firebase'],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: null,
+      liveUrl: null,
       gradient: 'from-blue-500 to-purple-600',
     },
     {
@@ -47,8 +47,8 @@ function Projects() {
       description:
         'Completed as part of the IBM Software Basics and Modeling program. Created UML diagrams to represent software structure and workflows. Learned software lifecycle stages, requirement analysis, and system design principles. Gained hands-on experience with modeling tools and documentation practices.',
       techStack: ['UML', 'Software Design', 'Documentation'],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: null,
+      liveUrl: null,
       gradient: 'from-indigo-500 to-blue-600',
     },
     {
@@ -56,8 +56,8 @@ function Projects() {
       description:
         'Developed a modern web application as part of the Client-Side Web Applications university course. Used React for building an interactive and responsive user interface. Connected the application to a custom database for storing and retrieving data dynamically. Focused on clean code structure, component reusability, and efficient state management.',
       techStack: ['React', 'JavaScript', 'Database', 'HTML', 'CSS'],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: null,
+      liveUrl: null,
       gradient: 'from-cyan-500 to-teal-600',
     },
     {
@@ -65,8 +65,8 @@ function Projects() {
       description:
         'Designed and developed websites for small clients using HTML, CSS, and JavaScript. Created responsive layouts and interactive features to improve user experience. Managed projects end-to-end, from design concept to deployment.',
       techStack: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: null,
+      liveUrl: null,
       gradient: 'from-orange-500 to-red-600',
     },
     {
@@ -74,8 +74,8 @@ function Projects() {
       description:
         'Developed a responsive personal portfolio website to promote web design and development services. Showcases previous work, service details, and contact options for potential clients. Focused on clean UI design, usability, and performance optimization. Implemented modern front-end techniques to ensure compatibility across devices and browsers.',
       techStack: ['HTML', 'CSS', 'JavaScript', 'UI/UX'],
-      githubUrl: '#',
-      liveUrl: '#',
+      githubUrl: null,
+      liveUrl: null,
       gradient: 'from-pink-500 to-rose-600',
     },
   ];
