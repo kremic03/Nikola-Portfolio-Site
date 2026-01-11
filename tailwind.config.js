@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -18,6 +19,19 @@ export default {
           700: '#0369a1',
           800: '#075985',
           900: '#0c4a6e',
+        },
+        // Figma dark theme colors
+        accent: {
+          pink: '#ff6b9d',
+          magenta: '#c44569',
+          orange: '#ff6b4a',
+          coral: '#ff7f50',
+          blue: '#4a9eff',
+        },
+        dark: {
+          bg: '#0a0a0a',
+          card: '#1a1a1a',
+          border: '#2a2a2a',
         },
       },
       fontFamily: {

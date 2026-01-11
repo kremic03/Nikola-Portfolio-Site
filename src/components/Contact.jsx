@@ -75,7 +75,7 @@ function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-primary-50">
+    <section id="contact" className="py-20 px-4 bg-white dark:bg-dark-bg transition-colors duration-300">
       <motion.div
         ref={ref}
         className="max-w-4xl mx-auto"
@@ -85,11 +85,11 @@ function Contact() {
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-gray-900 dark:text-white">
             Get In Touch
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-primary-400 mx-auto rounded-full mb-6"></div>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Feel free to reach out for collaborations and opportunities.
           </p>
         </motion.div>
@@ -103,26 +103,26 @@ function Contact() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-dark-border"
             >
-              <div className="text-primary-600 mb-4 flex justify-center">
+              <div className="text-primary-600 dark:text-accent-pink mb-4 flex justify-center">
                 {info.icon}
               </div>
-              <h3 className="font-display font-semibold text-lg mb-2 text-gray-900 text-center">
+              <h3 className="font-display font-semibold text-lg mb-2 text-gray-900 dark:text-white text-center">
                 {info.label}
               </h3>
               {info.label === 'Phone' ? (
                 showPhone ? (
                   <a
                     href={info.link}
-                    className="text-gray-600 text-sm text-center block hover:text-primary-600 transition-colors duration-300"
+                    className="text-gray-600 dark:text-gray-400 text-sm text-center block hover:text-primary-600 dark:hover:text-accent-pink transition-colors duration-300"
                   >
                     {info.value}
                   </a>
                 ) : (
                   <button
                     onClick={() => setShowPhone(true)}
-                    className="text-gray-600 text-sm text-center block hover:text-primary-600 transition-colors duration-300 w-full"
+                    className="text-gray-600 dark:text-gray-400 text-sm text-center block hover:text-primary-600 dark:hover:text-accent-pink transition-colors duration-300 w-full"
                   >
                     Click to reveal
                   </button>
@@ -130,12 +130,12 @@ function Contact() {
               ) : info.link ? (
                 <a
                   href={info.link}
-                  className="text-gray-600 text-sm text-center block hover:text-primary-600 transition-colors duration-300"
+                  className="text-gray-600 dark:text-gray-400 text-sm text-center block hover:text-primary-600 dark:hover:text-accent-pink transition-colors duration-300"
                 >
                   {info.value}
                 </a>
               ) : (
-                <p className="text-gray-600 text-sm text-center">{info.value}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm text-center">{info.value}</p>
               )}
             </motion.div>
           ))}
@@ -143,7 +143,7 @@ function Contact() {
 
         {/* Social Links */}
         <motion.div variants={itemVariants} className="text-center">
-          <h3 className="text-xl font-display font-semibold mb-6 text-gray-900">
+          <h3 className="text-xl font-display font-semibold mb-6 text-gray-900 dark:text-white">
             Connect With Me
           </h3>
           <div className="flex gap-6 justify-center">
@@ -153,7 +153,7 @@ function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-4 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-gray-700 ${social.color}`}
+                className={`p-4 bg-white dark:bg-dark-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-gray-700 dark:text-gray-300 border border-gray-100 dark:border-dark-border ${social.color}`}
                 aria-label={social.label}
               >
                 {social.icon}

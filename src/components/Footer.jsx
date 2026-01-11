@@ -26,7 +26,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4">
+    <footer className="bg-gray-900 dark:bg-black text-white py-12 px-4 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -47,22 +47,6 @@ function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              <li>
-                <button
-                  onClick={() => scrollToSection('about')}
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300 text-sm"
-                >
-                  About Me
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('skills')}
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300 text-sm"
-                >
-                  Skills
-                </button>
-              </li>
               <li>
                 <button
                   onClick={() => scrollToSection('projects')}

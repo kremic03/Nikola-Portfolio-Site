@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { ChevronDown } from 'lucide-react';
+import { SiReact, SiNodedotjs, SiHtml5, SiCss3, SiTailwindcss, SiPython, SiKotlin } from 'react-icons/si';
 import profileImage from '../assets/profilna_slika.jpeg';
 
 function Hero() {
@@ -28,98 +27,100 @@ function Hero() {
     },
   };
 
-  // Scroll to about section
-  let scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  let technologies = [
+    { icon: <SiReact size={32} />, name: 'React' },
+    { icon: <SiNodedotjs size={32} />, name: 'Node.js' },
+    { icon: <SiHtml5 size={32} />, name: 'HTML5' },
+    { icon: <SiCss3 size={32} />, name: 'CSS3' },
+    { icon: <SiTailwindcss size={32} />, name: 'Tailwind' },
+    { icon: <SiPython size={32} />, name: 'Python' },
+    { icon: <SiKotlin size={32} />, name: 'Kotlin' },
+  ];
+
+  let scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-primary-50 px-4 relative">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-dark-bg px-4 py-20 transition-colors duration-300">
       <motion.div
         className="max-w-4xl mx-auto text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Profile Image */}
+        {/* Profile Image with gradient border */}
         <motion.div variants={itemVariants} className="mb-8">
-          <div className="w-40 h-40 mx-auto rounded-full shadow-2xl overflow-hidden border-4 border-white">
-            <img
-              src={profileImage}
-              alt="Nikola Kremić"
-              className="w-full h-full object-cover object-center scale-100"
-            />
+          <div className="w-44 h-44 mx-auto rounded-full p-1 bg-gradient-to-br from-accent-pink via-accent-magenta to-accent-orange">
+            <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-dark-card">
+              <img
+                src={profileImage}
+                alt="Nikola Kremić"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           </div>
         </motion.div>
 
-        {/* Name */}
+        {/* Headline */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-display font-bold mb-4 text-gray-900"
+          className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-gray-900 dark:text-white"
         >
-          Nikola Kremić
+         I build web apps and
+          <br />
+          share my coding journey{' '}
+          <span className="bg-gradient-to-r from-accent-orange to-accent-coral bg-clip-text text-transparent">
+          with the world.
+          </span>
         </motion.h1>
 
-        {/* Tagline */}
+        {/* Bio */}
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-gradient font-semibold mb-6"
+          className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Web Developer • Software Engineering Student
+          I am a full-stack developer intern skilled in building web applications, with experience in frontend development using React, Next.js, JavaScript, and Tailwind CSS, as well as backend development and database modeling with PostgreSQL, SQL, and DBeaver.
         </motion.p>
 
-        {/* Short intro */}
-        <motion.p
-          variants={itemVariants}
-          className="text-lg text-gray-600 max-w-2xl mx-auto mb-8"
-        >
-          Building modern, responsive web applications with clean design and
-          attention to detail. Passionate about creating seamless user
-          experiences.
-        </motion.p>
-
-        {/* Social Links */}
+        {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex gap-4 justify-center mb-12"
+          className="flex flex-wrap gap-4 justify-center mb-16"
         >
-          <a
-            href="https://github.com/kremic03"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-gray-700 hover:text-primary-600"
+          <button
+            onClick={scrollToContact}
+            className="px-8 py-3 bg-white dark:bg-white text-gray-900 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <FaGithub size={24} />
-          </a>
+            Get In Touch
+          </button>
           <a
-            href="https://www.linkedin.com/in/nikola-kremic-b4a318257/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-gray-700 hover:text-primary-600"
+            href="/KremicNikolaCv.pdf"
+            download
+            className="px-8 py-3 bg-transparent border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-full font-semibold hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300 hover:-translate-y-1"
           >
-            <FaLinkedin size={24} />
-          </a>
-          <a
-            href="https://www.instagram.com/kremic_nikola/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-gray-700 hover:text-primary-600"
-          >
-            <FaInstagram size={24} />
+            Download CV
           </a>
         </motion.div>
 
-        {/* Scroll Down Indicator */}
-        <motion.button
-          variants={itemVariants}
-          onClick={scrollToAbout}
-          className="inline-flex flex-col items-center text-gray-500 hover:text-primary-600 transition-colors duration-300"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <span className="text-sm mb-2">Scroll to explore</span>
-          <ChevronDown size={24} />
-        </motion.button>
+        {/* Experience With Section */}
+        <motion.div variants={itemVariants}>
+          <p className="text-sm md:text-base uppercase tracking-wider text-gray-500 dark:text-gray-500 mb-6 font-semibold">
+            Experience With
+          </p>
+          <div className="flex gap-6 md:gap-8 justify-center items-center flex-wrap">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                className="text-gray-400 dark:text-gray-600 hover:text-gray-700 dark:hover:text-gray-400 transition-colors duration-300"
+                whileHover={{ scale: 1.1, y: -5 }}
+                title={tech.name}
+              >
+                {tech.icon}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
